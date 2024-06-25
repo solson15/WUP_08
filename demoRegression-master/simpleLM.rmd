@@ -18,15 +18,15 @@ bears$SEX<- as.factor(bears$SEX)
 bears$MONTH<- as.factor(bears$MONTH)
 ```
 
-## Model LENGTH ~ NECK  this is an example  
+## Model WEIGHT ~ NECK  this is an example  
 
 ```{r}
-simp <- lm(LENGTH~NECK,data=bears)
-plot(LENGTH~NECK,data=bears)
+simp <- lm(WEIGHT~NECK,data=bears)
+plot(WEIGHT~NECK,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
 
 
-## Compare all models that predict LENGTH other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
+## Compare all models that predict WEIGHT other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
