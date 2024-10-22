@@ -49,12 +49,34 @@ headlenmodel <- lm(WEIGHT~HEADLEN,data=bears)
 plot(WEIGHT~HEADLEN,data=bears)
 abline(headlenmodel)
 summary.lm(headlenmodel)
-
+```
 Best to worst
 1. Neck -> ARsqrd:0.87. RST:43.91
 2. Head length-> ARsqrd:0.69, RST:67.81
 3.Age - ARsrd: 0.55, RST:81.47
 Although the headlenmodel graph has scattered out plots it is better than the graph of agemodel. Comparing the Adjusted R-squared being higher at 0.69 and the agemodel Adjusted R-squared is 0.55, shows it being better than it but not high enough for simp’s Adjusted R-squared of 0.87.
 
+## Model WEIGHT ~ HEADWTH
 
+```{r}
+headwthmodel <- lm(WEIGHT~HEADWTH, data=bears)
+plot (WEIGHT~HEADWTH, data=bears)
+abline (headwthmodel)
+summary.lm(headwthmodel)
+```
+Best to worst
+1. Neck -> ARsqrd:0.87, RST:43.91
+2. Head length-> ARsqrd:0.69, RST:67.81
+3. Head width - ARsard:0.60, RST:76.41
+4.Age -> ARsrd: 0.55, RST:81.47
+3 Publish -
+headwthmodel would have a high Residual standard error of 76.41, being lower than agemodel’s 81.47 but not low enogh for headlenmodel’s
+67.81 Residual standard error.
 
+## Model WEIGHT ~ LENGTH
+
+```{r}
+lengthmodel <- Im(WEIGHT~LENGTH, data=bears)
+plot(WEIGHT~LENGTH, data=bears)
+abline (lengthmodel)
+summary.lm(lengthmodel)
