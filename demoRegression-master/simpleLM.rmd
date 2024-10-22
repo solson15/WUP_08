@@ -76,7 +76,16 @@ headwthmodel would have a high Residual standard error of 76.41, being lower tha
 ## Model WEIGHT ~ LENGTH
 
 ```{r}
-lengthmodel <- Im(WEIGHT~LENGTH, data=bears)
+lengthmodel <- lm(WEIGHT~LENGTH, data=bears)
 plot(WEIGHT~LENGTH, data=bears)
 abline (lengthmodel)
 summary.lm(lengthmodel)
+```
+Best to worst
+1. Neck -> ARsqrd:0.87, RST:43.91
+2.Length -> ARsqrd:0.74, RST:61.83
+3. Head length -> ARsqrd:0.69, RST:67.81
+4. Head width -> ARsqrd:0.60, RST:76.41
+5.Age -> ARsrd: 0.55, RST:81.47
+lengthmodel has a ARsgra of 0.74 being higher than headlenmodel’s 0.69 but not better than simp’smodel of 0.87.
+
