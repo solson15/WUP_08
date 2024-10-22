@@ -89,3 +89,19 @@ Best to worst
 5.Age -> ARsrd: 0.55, RST:81.47
 lengthmodel has a ARsgra of 0.74 being higher than headlenmodel’s 0.69 but not better than simp’smodel of 0.87.
 
+## Model WEIGHT ~ CHEST
+
+```{r}
+chestmodel <- lm(WEIGHT~CHEST, data=bears)
+plot (WEIGHT~CHEST, data=bears)
+abline (chestmodel)
+summary.lm(chestmodel)
+```
+
+Best to worst 1. Chest - ARsqrd:0.92, RST:33.08
+2. Neck -> ARsqrd:0.87, RST:43.91
+3.Length - ARsqrd:0.74, RST: 61.83
+4. Head length - ARsqrd:0.69, RST:67.81
+5. Head width - ARsard:0.60, RST:76.41
+6.Age - ARsrd: 0.55, RST:81.47
+The ranking for the best model is seen to be the Chest as the Adjusted R Squared is very high and the Residual standard error is low. This is seen with the chestmodel graph having the other plots close to the line. As we go down the list of worst to best we will see the plots being farther and farther away from the line made
