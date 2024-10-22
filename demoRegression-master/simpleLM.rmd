@@ -50,7 +50,11 @@ plot(WEIGHT~HEADLEN,data=bears)
 abline(headlenmodel)
 summary.lm(headlenmodel)
 
-
+Best to worst
+1. Neck -> ARsqrd:0.87. RST:43.91
+2. Head length-> ARsqrd:0.69, RST:67.81
+3.Age - ARsrd: 0.55, RST:81.47
+Although the headlenmodel graph has scattered out plots it is better than the graph of agemodel. Comparing the Adjusted R-squared being higher at 0.69 and the agemodel Adjusted R-squared is 0.55, shows it being better than it but not high enough for simp’s Adjusted R-squared of 0.87.
 
 
 
