@@ -30,3 +30,27 @@ summary.lm(simp)
 
 ## Compare all models that predict WEIGHT other than NECK. Then order them from worst to best by its value of Adjusted-Rsquared (bigger is better), or by RSE (residual standard error) where smaller is better. 
 
+## Model WEIGHT ~ AGE  this is an example  
+```{r}
+agemodel <- lm(WEIGHT~AGE,data=bears)
+plot(WEIGHT~AGE,data=bears)
+abline(agemodel)
+summary.lm(agemodel)
+```
+
+Best to worst
+1.Neck-> ARsqrd:0.87, RST:43.91
+2.Age -> ARsqrd:0.55, RST:81.47
+The agemodel graph shows its points to be far away from the line, while the simp graph has plots closer to it.
+
+
+```{r}
+headlenmodel <- lm(WEIGHT~HEADLEN,data=bears)
+plot(WEIGHT~HEADLEN,data=bears)
+abline(headlenmodel)
+summary.lm(headlenmodel)
+
+
+
+
+
